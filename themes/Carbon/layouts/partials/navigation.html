@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-md header-menu">
+    <div class="container">
+        <a class="navbar-brand" href="/">{{ .Site.Title }}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto menu-bar">
+                {{ $currentPage := . }}
+                {{ range .Site.Menus.main }}
+                <li class="menu-item">
+                    <a class="menu-item-inner {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</nav>

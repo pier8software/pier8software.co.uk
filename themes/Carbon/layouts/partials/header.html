@@ -1,0 +1,21 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ if .Title }}{{ .Title }}{{ end }} | {{ .Site.Title }}</title>
+    {{- partial "seo.html" . -}}
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/images/apple-touch-icon.png" }}"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ "/images/favicon-32x32.png" }}"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ "/images/favicon-16x16.png" }}"/>
+    <link rel="icon" href="{{ "/images/favicon.ico" }}"/>
+    <link rel="icon" type="image/png" sizes="192x192"  href="{{ "/images/android-icon-192x192.png" }}"/>
+    <link rel="manifest" href="{{ "/images/site.webmanifest" }}"/>
+    {{ $style := resources.Get "scss/template.scss" | toCSS}}
+    {{ $bscss := resources.Get "css/bootstrap.min.css" }}
+    {{ $social := resources.Get "css/icomoon-fonts.css" }}
+    {{ $allcss := slice $bscss $social $style | resources.Concat "/css/vendor.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $allcss.Permalink }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    {{ $built := resources.Get "js/bootstrap.bundle.min.js" | js.Build "main.js" }}
+    <script type="text/javascript" src="{{ $built.RelPermalink }}" defer></script>
+    </head>

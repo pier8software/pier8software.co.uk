@@ -1,0 +1,32 @@
+
+{{ define "main" }}
+<div class="blog-page-single">
+    <div class="blog-page-big-img" style="background:url('{{ .Params.image  | absURL }}') center center; background-size:cover;">
+    </div>
+    <div class="inner-container">
+        <h1 class="blog-page-single-title">{{ .Title }}</h1>
+        <div class="blog-page-details">
+            <div class="row align-items-center">
+                <dic class="col">
+                    <div class="category-tags-holder">
+                        {{ range (.GetTerms "categories") }}
+                        <a class="category-badge" href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+                        {{ end }}
+                    </div>
+                </dic>
+                <dic class="col-auto">
+                    <div class="blog-page-stats">
+                        <span>Reading Time : {{ .ReadingTime }} mins</span>
+                        <span>Word Count : {{ .WordCount }} words</span>
+                    </div>
+                </dic>
+            </div>
+        </div>
+        <p>{{ .Content }}</p>
+
+    </div>
+</div>
+
+
+
+{{ end }}

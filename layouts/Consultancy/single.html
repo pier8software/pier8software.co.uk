@@ -1,0 +1,37 @@
+{{ define "main" }}
+<div class="say-hi">
+    <div class="user-info">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h2 class="user-info-title">About Me</h2>
+                {{ .Content }}
+            </div>
+            <div class="col-lg-4">
+                <img src="/images/Derek-2018.jpg" class="img-fluid" alt="user image">
+            </div>
+        </div>
+    </div>
+    <div class="say-hi-content">
+        <h2>Contact Me</h2>
+    </div>
+    <form action="">
+        <div class="custom-form-contol">
+            <label for="user-name" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="user-name" placeholder="John Doe">
+        </div>
+        <div class="custom-form-contol">
+            <label for="user-email" class="form-label">Your Email Address</label>
+            <input type="email" class="form-control" id="user-email" placeholder="johndoe@gmail.com">
+        </div>
+        <div class="custom-form-contol">
+            <label for="user-mobile" class="form-label">Your Mobile Number</label>
+            <input type="text" class="form-control" id="user-mobile" placeholder="+1-541-754-3010">
+        </div>
+        <div class="custom-form-contol">
+            <label for="user-message" class="form-label">Message</label>
+            <textarea rows="6" type="text" class="form-control" id="user-message" placeholder="Enter your message"></textarea>
+        </div>
+        <button class="btn btn-block btn-black-custom">Submit</button>
+    </form>
+</div>
+{{ end }}

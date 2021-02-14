@@ -1,0 +1,8 @@
+baseURL : "/"
+languageCode : "en-us"
+title : "Carbon Blog | HUGO"
+Paginate: 15
+params:
+    description: "A simple clean HUGO blog template"
+    author: Red Sparrow Themes
+    keywords: Blog, Personal Blog, Travel, Food

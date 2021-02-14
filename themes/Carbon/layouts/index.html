@@ -1,0 +1,40 @@
+{{ define "main" }}
+{{- partial "banner.html" . -}}
+<div class="container">
+  <div class="home-page-blog-holder">
+      <div class="row">
+          {{ $paginator := .Paginate (where .Site.Pages "Params.type" "blog") }}
+          {{ range $paginator.Pages }}    
+          <div class="col-lg-3 col-sm-6 col-md-6 animate__animated animate__fadeInLeft animate__delay-1s">
+          <div class="blog-card">
+              <div class="blog-card-bg-image" style="background:url('{{ .Params.image}}') center center; background-size:cover;">
+              </div>
+              <div class="card-body-inner">
+              
+              <a  href="{{ .Permalink }}" class="blog-card-title" href="">{{ .Title}}</a>
+              {{ .Content | truncate 60 }}
+              </div>
+          </div>
+          </div>
+          {{ end }}
+          <div class="pagination-wrapper">
+              {{ template "_internal/pagination.html" . }}
+          </div>
+    </div>
+  </div>
+  <div class="suscribe-section">
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+        <h3 class="subs-section-title">Subscribe to our newsletter</h3>
+        <p class="subs-section-details">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, quibusdam!</p>
+      </div>
+      <div class="col-lg-5">     
+        <div class="input-group suscribe-section-input">
+          <input type="email" class="form-control" placeholder="johndoe@gmail.com" aria-label="Recipient's username" aria-describedby="button-addon2">
+          <button class="btn btn-subs-custom" type="button">SUBMIT</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
