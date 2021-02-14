@@ -12,7 +12,7 @@
     {{ $style := resources.Get "scss/template.scss" | toCSS}}
     {{ $bscss := resources.Get "css/bootstrap.min.css" }}
     {{ $social := resources.Get "css/icomoon-fonts.css" }}
-    {{ $allcss := slice $bscss $social $style | resources.Concat "/css/vendor.css" | minify | fingerprint }}
+    {{ $allcss := slice $bscss $social $style | resources.Concat "/css/site.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $allcss.Permalink }}">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
