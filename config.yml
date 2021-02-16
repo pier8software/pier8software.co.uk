@@ -3,6 +3,6 @@ languageCode: "en-gb"
 title: "Pier 8 Software"
 Paginate: 15
 params:
-    description: "A simple clean HUGO blog template"
-    author: Red Sparrow Themes
-    keywords: Blog, Personal Blog, Travel, Food
+    description: "Software Stuff"
+    author: Richard Tasker
+    keywords: Blog, Software
