@@ -92,33 +92,33 @@ p {
     .category-tags-holder .category-badge:hover {
       text-decoration: underline; }
 
-.suscribe-section {
+.subscribe-section {
   background-color: #f6f2ef;
   border-radius: 20px;
   padding: 50px 40px;
   margin-bottom: 80px; }
-  .suscribe-section .subs-section-title {
+  .subscribe-section .subs-section-title {
     color: #3d3c3a;
     font-size: 22px;
     font-weight: 800; }
-  .suscribe-section .subs-section-details {
+  .subscribe-section .subs-section-details {
     color: #686765;
     margin-bottom: 30px;
     font-size: 15px; }
-  .suscribe-section .suscribe-section-input .form-control {
+  .subscribe-section .subscribe-section-input .form-control {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     padding: 10px 20px;
     font-weight: 300; }
-    .suscribe-section .suscribe-section-input .form-control::placeholder {
+    .subscribe-section .subscribe-section-input .form-control::placeholder {
       color: #ccc; }
-  .suscribe-section .suscribe-section-input .btn-subs-custom {
+  .subscribe-section .subscribe-section-input .btn-subs-custom {
     padding: 10px 30px;
     background: #202020;
     color: #fff;
     font-weight: 600;
     letter-spacing: 1px; }
-    .suscribe-section .suscribe-section-input .btn-subs-custom:hover {
+    .subscribe-section .subscribe-section-input .btn-subs-custom:hover {
       background: #161616; }
 
 .pagination-wrapper {
@@ -365,22 +365,22 @@ footer {
       padding: 30px 15px; } }
 
 @media (min-width: 992px) {
-  .suscribe-section .subs-section-details {
+  .subscribe-section .subs-section-details {
     margin: 0; }
-  .suscribe-section .suscribe-section-input .form-control {
+  .subscribe-section .subscribe-section-input .form-control {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     padding: 10px 20px;
     font-weight: 300; }
-    .suscribe-section .suscribe-section-input .form-control::placeholder {
+    .subscribe-section .subscribe-section-input .form-control::placeholder {
       color: #ccc; }
-  .suscribe-section .suscribe-section-input .btn-subs-custom {
+  .subscribe-section .subscribe-section-input .btn-subs-custom {
     padding: 10px 30px;
     background: #202020;
     color: #fff;
     font-weight: 600;
     letter-spacing: 1px; }
-    .suscribe-section .suscribe-section-input .btn-subs-custom:hover {
+    .subscribe-section .subscribe-section-input .btn-subs-custom:hover {
       background: #161616; }
   #categories-page {
     padding: 80px 0; }

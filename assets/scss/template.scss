@@ -119,7 +119,7 @@ p {
 	}
 }
 
-.suscribe-section {
+.subscribe-section {
 	background-color: #f6f2ef;
 	border-radius: 20px;
 	padding: 50px 40px;
@@ -134,7 +134,7 @@ p {
 		margin-bottom: 30px;
 		font-size: 15px;
 	}
-	.suscribe-section-input {
+	.subscribe-section-input {
 		.form-control {
 			border-top-left-radius: 10px;
 			border-bottom-left-radius: 10px;
@@ -506,11 +506,11 @@ footer {
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-	.suscribe-section {
+	.subscribe-section {
 		.subs-section-details {
 			margin: 0;
 		}
-		.suscribe-section-input {
+		.subscribe-section-input {
 			.form-control {
 				border-top-left-radius: 10px;
 				border-bottom-left-radius: 10px;
