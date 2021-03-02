@@ -10,6 +10,6 @@ I am available for Architecture, CQRS, Event Sourcing, Messaging, and .NET Devel
 
 ## About Me
 
-Richard Tasker is an independent software developer with over 12 years of professional experience building web applications for the cloud.  
+Richard Tasker is an independent software developer with over a decade of professional experience building web applications for the cloud.  
 
 He has written software for a variety of business domains such as accounting, print management, trading, distribution, quality assurance &amp; certification.

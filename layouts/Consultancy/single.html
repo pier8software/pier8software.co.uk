@@ -13,7 +13,8 @@
     <div class="say-hi-content">
         <h2>Contact Me</h2>
     </div>
-    <form action="">
+    <form name="contact" class="contact-form width-normal" action="/" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact" />
         <div class="custom-form-contol">
             <label for="user-name" class="form-label">Your Name</label>
             <input type="text" class="form-control" id="user-name" placeholder="John Doe">
