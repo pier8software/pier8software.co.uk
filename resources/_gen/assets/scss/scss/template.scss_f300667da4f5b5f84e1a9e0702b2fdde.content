@@ -273,15 +273,15 @@ p {
     text-align: center; }
     .say-hi .say-hi-content h2 {
       margin-bottom: 30px; }
-  .say-hi .custom-form-contol {
+  .say-hi .custom-form-control {
     margin-bottom: 25px; }
-    .say-hi .custom-form-contol .form-control {
+    .say-hi .custom-form-control .form-control {
       background-color: #f7f7f7;
       border: none;
       width: 100%;
       padding: 14px 20px;
       font-weight: 300; }
-      .say-hi .custom-form-contol .form-control::placeholder {
+      .say-hi .custom-form-control .form-control::placeholder {
         color: #ccc; }
   .say-hi .btn-black-custom {
     background-color: #111111;
