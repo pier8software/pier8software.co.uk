@@ -9,8 +9,8 @@
             <div class="row align-items-center">
                 <dic class="col">
                     <div class="category-tags-holder">
-                        {{ range .Params.categories }}
-                        <a class="category-badge" href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+                        {{ range (.GetTerms "categories") }}
+                            <a class="category-badge" href="{{ .Permalink }}">{{ .LinkTitle }}</a>
                         {{ end }}
                     </div>
                 </dic>
