@@ -4,6 +4,7 @@
 <body>
   {{- partial "navigation.html" . -}}
    {{- block "main" . -}}{{- end -}}
-  {{- partial "footer.html" . -}}
+  {{- partial "footer.html" . -}}  
+  {{- block "scripts" . -}}{{- end -}}
 </body>
 </html>
