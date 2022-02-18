@@ -1,12 +1,11 @@
 {{ define "main" }}
 <div id="categories-page" class="container">
-        <h1 class="page-title">{{ .Title }}</h1>
-        {{ .Content }}
+        <h1 class="page-title">{{ .Title }}</h1>        
         <div class="row justify-content-center">
-            {{ range .Data.Terms.ByCount }}
+            {{ range .Data.Terms.Alphabetical }}
             <div class="col-md-3">
                 <div class="category-card">
-                    <!-- <div class="category-card">
+                    <div class="category-card">
                         <a href="{{ .Page.Permalink }}">
                             <figure class="image is-3by2">
                                 {{ $firstChild := index .Pages 0 }}
@@ -15,7 +14,7 @@
                                 {{ end }}
                             </figure>
                         </a>
-                    </div> -->
+                    </div>
                     <div class="category-card-details">
                         <a class="category-card-title" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
                         {{ $pageCount := len .Pages }}
@@ -26,5 +25,4 @@
             {{ end }}
         </div>
     </div>
-
 {{ end }}
