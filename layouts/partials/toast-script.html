@@ -1,0 +1,49 @@
+{{ define "scripts" }}
+  <script>
+    var signup = Toastify({
+      text: "Thank you for Subscribing!",
+      gravity: "top",
+      position: 'center',
+      duration: 3500,
+      className: "alert alert-success"
+    });
+
+    var contact = Toastify({
+      text: "Thank you for your message!",
+      gravity: "top",
+      position: 'center',
+      duration: 3500,
+      className: "alert alert-success"
+    });
+
+    const processForm = form => {
+      const data = new FormData(form)
+      data.append('form-name', form.name);
+      fetch('/', {
+        method: 'POST',
+        body: data,
+      })
+      .then(() => {
+        form.reset();
+        if (form.name === 'contact') 
+        {
+            contact.showToast();
+        }
+        else
+        {
+            signup.showToast();
+        }        
+      })
+      .catch(error => {
+        console.log(error);
+      })
+    }
+
+    Array.from(document.forms).forEach((form) => {
+        form.addEventListener('submit', e => {
+        e.preventDefault();
+        processForm(form);
+      })
+    });
+  </script>
+{{ end }}

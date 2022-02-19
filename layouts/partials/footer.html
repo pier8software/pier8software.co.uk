@@ -60,39 +60,3 @@
         </div>
     </div>
 </footer>
-
-{{ define "scripts" }}
-  <script>
-    var myToast = Toastify({
-      text: "Thank you for Subscribing!",
-      gravity: "top",
-      position: 'center',
-      duration: 3500,    
-      className: "alert alert-success"
-    });
-
-    const processForm = form => {
-      const data = new FormData(form)
-      data.append('form-name', 'newsletter');
-      fetch('/', {
-        method: 'POST',
-        body: data,
-      })
-      .then(() => {
-        form.reset();
-        myToast.showToast();        
-      })
-      .catch(error => {
-        console.log(error);
-      })
-    }
-
-    const emailForm = document.querySelector('.email-form')
-    if (emailForm) {
-      emailForm.addEventListener('submit', e => {
-        e.preventDefault();
-        processForm(emailForm);
-      })
-    }
-  </script>
-{{ end }}
