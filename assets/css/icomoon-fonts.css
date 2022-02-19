@@ -1,8 +1,6 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot') format('embedded-opentype'),
-    url('../fonts/icomoon.woff') format('woff'),
-    url('../fonts/icomoon.svg') format('svg');
+  src:  url('/fonts/icomoon.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -26,15 +24,9 @@
 .icon-youtube-play:before {
   content: "\e900";
 }
-.icon-facebook:before {
+.icon-github:before {
   content: "\e901";
 }
 .icon-twitter:before {
   content: "\ea96";
-}
-.icon-linkedin:before {
-  content: "\eac9";
-}
-.icon-pinterest:before {
-  content: "\ead1";
 }
