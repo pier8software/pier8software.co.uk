@@ -9,7 +9,7 @@ const fetch = require('node-fetch')
 const { EMAIL_TOKEN } = process.env
 const handler = async (event) => {
   const { email } = JSON.parse(event.body).payload
-  console.log(`Received a submission: ${email}`)
+  console.log(`Received a submission: ${email}`)  
   try {
     const response = await fetch('https://api.buttondown.email/v1/subscribers', {
       method: 'POST',

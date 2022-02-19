@@ -12,3 +12,8 @@ command = "hugo --gc --minify --buildFuture -b $DEPLOY_URL"
 
 [context.deploy-preview.environment]
 HUGO_VERSION = "0.92.2"
+
+[dev]
+command = "hugo -b http://127.0.0.1:8888/ -w --buildDrafts -F"
+framework = "#static"
+publish = "./public/"
