@@ -21,12 +21,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-youtube-play:before {
+.icon-home:before {
   content: "\e900";
 }
 .icon-github:before {
-  content: "\e901";
+  content: "\eab0";
 }
 .icon-twitter:before {
   content: "\ea96";
+}
+.icon-youtube:before {
+  content: "\ea9d";
 }
