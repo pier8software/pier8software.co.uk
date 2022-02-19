@@ -3,6 +3,7 @@ languageCode: "en-gb"
 title: "Pier 8 Software"
 Paginate: 15
 params:
-    description: "Software Stuff"
+    description: "Pier 8 Software is Richard Tasker, a software developer with over 10 years of professional software development experience.
+The Pier 8 blog focuses on .Net, Microservices, Software Architecture & Design, DDD, CQRS & Event Sourcing."
     author: Richard Tasker
-    keywords: Blog, Software
+    keywords: .Net, Microservices, Software Architecture, Domain Driven Design, CQRS, Event Sourcing.

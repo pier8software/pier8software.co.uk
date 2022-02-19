@@ -21,64 +21,6 @@
               {{ template "_internal/pagination.html" . }}
           </div>
     </div>
-  </div>
-  <div class="subscribe-section">
-    <form id="email-form" class="email-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-      <div hidden aria-hidden="true">
-        <label>
-          Don’t fill this out if you're human: 
-          <input name="bot-field" />
-        </label>
-      </div>
-      <div class="row align-items-center">
-        <div class="col-lg-7">
-          <h3 class="subs-section-title">Subscribe to our newsletter</h3>
-          <p class="subs-section-details">If you like this content and want to hear more, consider subscribing to get notifications in your inbox.</p>
-        </div>
-        <div class="col-lg-5">     
-          <div class="input-group subscribe-section-input">
-            <input name="email" type="email" class="form-control" placeholder="johndoe@gmail.com" aria-label="Recipient's email" aria-describedby="button-addon2">
-            <button class="btn btn-subs-custom" type="submit">SUBMIT</button>
-          </div>
-        </div>
-      </div>
-  </form>
-  </div>
+  </div>  
 </div>
-{{ end }}
-
-{{ define "scripts" }}
-  <script>
-    var myToast = Toastify({
-      text: "Thank you for Subscribing!",
-      gravity: "top",
-      position: 'center',
-      duration: 3500,    
-      className: "alert alert-success"
-    });
-
-    const processForm = form => {
-      const data = new FormData(form)
-      data.append('form-name', 'newsletter');
-      fetch('/', {
-        method: 'POST',
-        body: data,
-      })
-      .then(() => {
-        form.reset();
-        myToast.showToast();        
-      })
-      .catch(error => {
-        console.log(error);
-      })
-    }
-
-    const emailForm = document.querySelector('.email-form')
-    if (emailForm) {
-      emailForm.addEventListener('submit', e => {
-        e.preventDefault();
-        processForm(emailForm);
-      })
-    }
-  </script>
 {{ end }}
