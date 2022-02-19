@@ -12,6 +12,3 @@ command = "hugo --gc --minify --buildFuture -b $DEPLOY_URL"
 
 [context.deploy-preview.environment]
 HUGO_VERSION = "0.92.2"
-
-[functions]
-directory = "./.netlify/functions"
